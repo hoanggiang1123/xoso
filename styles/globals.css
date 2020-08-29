@@ -3,7 +3,7 @@
 	--secondary: #fff200;
 }
 /**** Reset Css ****/
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}a{text-decoration: none}
 /**** Fonts ****/
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap);
@@ -26,8 +26,7 @@ body {
 }
 /**** Mobile ****/
 .site-header_top {
-	height: 50px;
-	background: linear-gradient(60deg, var(--primary), var(--secondary));
+	background: linear-gradient(60deg, #ff3838, #f53131);
 	box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
 }
 
@@ -46,7 +45,7 @@ body {
 	display: none;
 }
 .site-header_top_logo {
-	display: flex;
+	padding: 5px;
 }
 .humburger, .site-header_top_logo, .quay-mobile {
 	display: flex;
@@ -83,13 +82,13 @@ body {
 }
 .site-header_top_logo img{
 	display: block;
-	width: 75%;
+	max-width: 180px;
 }
 .quay-mobile {
 	text-align: center;
-    color: #f00;
-    font-weight: bold;
-    border-left: 2px solid #fff;
+    color: #FFF;
+	font-weight: bold;
+	background: red;
 }
 /**** Small & Table Style ****/
 

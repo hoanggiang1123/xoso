@@ -1,4 +1,31 @@
+import 'mmenu-light/dist/mmenu-light.css'
+import './header.css'
+
+import { useEffect } from 'react'
+import { useRouter } from 'next/router';
+
+import { MobileNav } from '../MobileNav'
+
 export default function Header() {
+
+    useEffect(() => {
+        //@ts-ignore
+        const menu = new MmenuLight( document.querySelector( "#m-nav" ))
+        menu.navigation({ 
+            slidingSubmenus: true,
+            theme: 'light',
+            title: 'Lottery'
+        })
+        const drawer = menu.offcanvas()
+        document.querySelector( ".humbuget-btn" ).addEventListener( "click", ( e ) => { drawer.open()})
+    },[])
+
+    const router = useRouter();
+
+    const handleHomeClick = () => {
+        router.push('/');
+    }
+    
     return (
         <div className="site-header">
             <div className="site-header_top">
@@ -8,7 +35,7 @@ export default function Header() {
                             <div className="humbuget-btn"></div>
                         </div>
                         <div className="site-header_top_logo">
-                            <img src="./BDTT-logo-3.png" />
+                            <img src="/BDTT-logo-3.png" onClick={handleHomeClick}/>
                         </div>
                         <div className="site-header_top_rolling">
                             <div className="roll-btn">
@@ -29,6 +56,7 @@ export default function Header() {
                     </div>
                 </div>
             </div>
+            <MobileNav />
         </div>
     )
 }

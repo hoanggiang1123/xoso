@@ -1,0 +1,10 @@
+.mm-spn.mm-spn--light {
+	background: linear-gradient(60deg, #ff3838, #f53131);
+	color: #FFF;
+}
+.mm-spn.mm-spn--navbar:after {
+	opacity: 1;
+}
+.mm-spn li:before {
+    opacity: 1;
+}

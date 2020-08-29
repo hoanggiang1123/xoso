@@ -1,6 +1,10 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useGlobalState } from '../state';
+import { WeekDay } from '../components/WeekDay';
 
 export default function Home() {
-  return <h2>Hello world</h2>
+	return <div className="index-page">
+		<div className="container">
+			<WeekDay />
+		</div>
+	</div>
 }
