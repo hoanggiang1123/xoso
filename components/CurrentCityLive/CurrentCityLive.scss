@@ -1,0 +1,8 @@
+.citylive-section {
+    margin-top: 10px;
+}
+.box-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: 1fr;
+}

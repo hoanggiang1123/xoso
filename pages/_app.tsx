@@ -6,7 +6,7 @@ import { AppContext, AppProps } from "next/app";
 
 import { Header } from '../components/Header';
 
-import { checkParams } from '../helpes';
+import { checkParams } from '../helpers';
 
 
 function MyApp({ Component, pageProps }: AppProps) {

@@ -1,4 +1,4 @@
-import { LOTOVN } from './lotoMockUp';
+import { LOTOVN, LOTO_DAY } from './lotoMockUp';
 
 function transformLotoDay(day, slugArr, name = '', slug = '') {
 
@@ -64,9 +64,9 @@ function transformDate(date) {
     return newdate;
 }
 
-function getWeekDay(date) {
+function getWeekDay(date = '') {
 
-    const dayOfWeek = new Date(date).getDay();
+    const dayOfWeek = date === '' ? new Date().getDay() : new Date(date).getDay();
 
     return isNaN(dayOfWeek) ? null : 
     ['chu-nhat', 'thu-2', 'thu-3', 'thu-4', 'thu-5', 'thu-6', 'thu-7'][dayOfWeek];
@@ -132,22 +132,22 @@ function getDayActiveAreaCityDate(day, area, area_city_date) {
     return newday;
 }
 
-export const getDayActive = (day, query) => {
+export const getDayActive = (query) => {
 
     switch (query.type) {
         case '':
-            return day;
+            return LOTO_DAY;
         case 'area':
-            return getDayActiveArea(day, query.area);
+            return getDayActiveArea(LOTO_DAY, query.area);
         case 'area-date':
-            return getDayActiveAreaDate(day, query.area, query.daydatecity);
+            return getDayActiveAreaDate(LOTO_DAY, query.area, query.daydatecity);
         case 'area-day':
-            return getDayActiveAreaDay(day, query.area, query.daydatecity);
+            return getDayActiveAreaDay(LOTO_DAY, query.area, query.daydatecity);
         case 'area-city':
-            return getDayActiveAreaCity(day, query.area, query.daydatecity);
+            return getDayActiveAreaCity(LOTO_DAY, query.area, query.daydatecity);
         case 'area-city-date':
-            return getDayActiveAreaCityDate(day, query.area, query.date);
-        default: return day;
+            return getDayActiveAreaCityDate(LOTO_DAY, query.area, query.date);
+        default: return LOTO_DAY;
     }
 
 }

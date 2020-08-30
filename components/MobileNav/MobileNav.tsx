@@ -1,14 +1,13 @@
 import Link from 'next/link';
 
-import { useGlobalState } from '../../state';
+import { MOBILE_MENU } from '../../helpers/lotoMockUp';
 
 export default function MobileNav () {
-    const [ nav ] = useGlobalState('mobileMenu');
     return (
         <nav id="m-nav">
             <ul>
                 {
-                    nav.length && nav.map((item, index) => {
+                    MOBILE_MENU.length && MOBILE_MENU.map((item, index) => {
                         return <li key={ item.slug + index }>
                             {
                                 item.slug.indexOf('xo-so-mien-') > -1 ?

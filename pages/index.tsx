@@ -1,10 +1,10 @@
 import { useGlobalState } from '../state';
-import { WeekDay } from '../components/WeekDay';
+import { CurrentCityLive } from '../components/CurrentCityLive';
 
 export default function Home() {
 	return <div className="index-page">
 		<div className="container">
-			<WeekDay />
+			<CurrentCityLive />
 		</div>
 	</div>
 }

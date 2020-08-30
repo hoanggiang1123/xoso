@@ -4,44 +4,39 @@ import { useEffect, useState, useMemo } from 'react';
 import { useRouter } from 'next/router';
 
 import WeekDayItem from './WeekDayItem';
+import HotItem from './HotItem';
 
-import { checkParams } from '../../helpes';
-import { getDayActive } from '../../helpes/lotoDay';
-import { useGlobalState } from '../../state';
+import { checkParams } from '../../helpers';
+import { getDayActive } from '../../helpers/lotoDay';
+import { HOT_ITEM } from '../../helpers/lotoMockUp';
 
 
 const WeekDay = () => {
   
     const [newday, setNewDay] = useState([]);
-
-    const [ day ] = useGlobalState('lotoDay');
+    const [hotItem, setHotItem] = useState([]);
 
     const { query } = useRouter();
+    const area = query.area ? query.area as string : 'xo-so-mien-bac';
 
     useMemo(() => {
         const params = checkParams(query);
-        const newday = getDayActive(day, params);
+        const newday = getDayActive(params);
         setNewDay(newday);
     }, [query]);
     
-    return <div className="weekday-section">
+    useMemo(() => {
+        const hotitem = HOT_ITEM[area];
+        setHotItem(hotitem);
+    }, [area])
+    
+    return <div className="weekday-section box">
                 <div className="weekday-hot">
-                    <div className="hot-item">
-                        <span>Hot</span>
-                        <a href="">Loto Gan MB</a>
-                    </div>
-                    <div className="hot-item">
-                        <span>Hot</span>
-                        <a href="">Cầu nhiều nháy</a>
-                    </div>
-                    <div className="hot-item">
-                        <span>Hot</span>
-                        <a href="">Cầu bạc thủ mb</a>
-                    </div>
-                    <div className="hot-item">
-                        <span>Hot</span>
-                        <a href="">Lô kết hôm nay</a>
-                    </div>
+                    {
+                        hotItem.length && hotItem.map((item, index) => {
+                            return <HotItem item={item}  key={ index }/>
+                        })
+                    }
                 </div>
                 <div className="weekday">
                     {

@@ -5,6 +5,14 @@ function checkDate(date: string) {
     return /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/.test(date);
 }
 
+function getWeekDay(date = '') {
+
+    const dayOfWeek = date === '' ? new Date().getDay() : new Date(date).getDay();
+
+    return isNaN(dayOfWeek) ? null : 
+    ['chu-nhat', 'thu-2', 'thu-3', 'thu-4', 'thu-5', 'thu-6', 'thu-7'][dayOfWeek];
+}
+
 export const checkParams = (query) => {
 
     let results = {
@@ -106,4 +114,9 @@ export const checkParams = (query) => {
     }
     
     return results;
+}
+
+export const currentCityLive = (date = '') => {
+    const daySlug = getWeekDay(date);
+    return SCHEDULE[daySlug];
 }

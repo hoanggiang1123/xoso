@@ -453,3 +453,283 @@ export const LOTOVN = {
         }
     }
 }
+
+export const MOBILE_MENU = [
+    {
+        name: 'Xổ Số Miền Bắc',
+        slug: 'xo-so-mien-bac',
+        path: '/[area]',
+        subpath: '/[area]/[daydatecity]',
+        sub: [
+            {
+                name: 'Thứ 2',
+                slug: 'thu-2'
+            },
+            {
+                name: 'Thứ 3',
+                slug: 'thu-3'
+            },
+            {
+                name: 'Thứ 4',
+                slug: 'thu-4'
+            },
+            {
+                name: 'Thứ 5',
+                slug: 'thu-5'
+            },
+            {
+                name: 'Thứ 6',
+                slug: 'thu-6'
+            },
+            {
+                name: 'Thứ 7',
+                slug: 'thu-7'
+            },
+            {
+                name: 'Chủ nhật',
+                slug: 'chu-nhat'
+            }
+        ]
+    },
+    {
+        name: 'Xổ Số Miền Nam',
+        slug: 'xo-so-mien-nam',
+        path: '/[area]',
+        subpath: '/[area]/[daydatecity]',
+        sub: [
+            {
+                name: 'Thứ 2',
+                slug: 'thu-2'
+            },
+            {
+                name: 'Thứ 3',
+                slug: 'thu-3'
+            },
+            {
+                name: 'Thứ 4',
+                slug: 'thu-4'
+            },
+            {
+                name: 'Thứ 5',
+                slug: 'thu-5'
+            },
+            {
+                name: 'Thứ 6',
+                slug: 'thu-6'
+            },
+            {
+                name: 'Thứ 7',
+                slug: 'thu-7'
+            },
+            {
+                name: 'Chủ nhật',
+                slug: 'chu-nhat'
+            }
+        ]
+    },
+    {
+        name: 'Xổ Số Miền Trung',
+        slug: 'xo-so-mien-trung',
+        path: '/[area]',
+        subpath: '/[area]/[daydatecity]',
+        sub: [
+            {
+                name: 'Thứ 2',
+                slug: 'thu-2'
+            },
+            {
+                name: 'Thứ 3',
+                slug: 'thu-3'
+            },
+            {
+                name: 'Thứ 4',
+                slug: 'thu-4'
+            },
+            {
+                name: 'Thứ 5',
+                slug: 'thu-5'
+            },
+            {
+                name: 'Thứ 6',
+                slug: 'thu-6'
+            },
+            {
+                name: 'Thứ 7',
+                slug: 'thu-7'
+            },
+            {
+                name: 'Chủ nhật',
+                slug: 'chu-nhat'
+            }
+        ]
+    },
+    {
+        name: 'Thống kê',
+        slug: 'thong-ke',
+        path: '/thong-ke',
+        subpath: '/thong-ke/[type]',
+        sub: [
+            {
+                name: 'Thống kê lô gan',
+                slug: 'thong-ke-lo-gan'
+            },
+            {
+                name: 'Thống kê giải đặc biệt',
+                slug: 'thong-ke-giai-dac-biet'
+            },
+            {
+                name: 'Thống kê Đầu - Đuôi',
+                slug: 'thong-ke-dau-duoi'
+            },
+            {
+                name: 'Tần suất xuất hiện',
+                slug: 'thong-ke-tan-suat'
+            },
+            {
+                name: 'TK từ 00 đến 99',
+                slug: 'thong-ke-00-99'
+            },
+            {
+                name: 'Thống kê lô xiên',
+                slug: 'thong-ke-lo-xiên'
+            },
+            {
+                name: 'Thống kê lô kép',
+                slug: 'thong-ke-lo-kép'
+            }
+        ]
+    },
+    {
+        name: 'Trực tiếp xổ số',
+        slug: 'truc-tiep-xo-so',
+        path: '/truc-tiep-xo-so',
+        subpath: '/truc-tiep-xo-so/[type]',
+        sub: [
+            {
+                name: 'Trực tiếp miền nam',
+                slug: 'truc-tiep-mien-nam'
+            },
+            {
+                name: 'Trực tiếp miền bắc',
+                slug: 'truc-tiep-mien-bac'
+            },
+            {
+                name: 'Trực tiếp miền trung',
+                slug: 'truc-tiep-mien-trung'
+            }
+        ]
+    },
+    {
+        name: 'Quay thử xổ số',
+        slug: 'quay-thu-xo-so',
+        path: '/quay-thu-xo-so',
+        subpath: '/quay-thu-xo-so/[type]',
+        sub: [
+            {
+                name: 'Quay thử miền nam',
+                slug: 'quay-thu-mien-nam'
+            },
+            {
+                name: 'Quay thử miền bắc',
+                slug: 'quay-thu-mien-bac'
+            },
+            {
+                name: 'Quay thử miền trung',
+                slug: 'quay-thu-mien-trung'
+            }
+        ]
+    },
+    {
+        name: 'Tra cứ kq',
+        slug: 'tra-cuu-ket-qua-xo-so',
+        path: '/tra-cuu',
+        subpath: '/tra-cuu/[type]',
+        sub: [
+            {
+                name: 'Kết quả hôm nay',
+                slug: 'ket-qua-hom-nay'
+            },
+            {
+                name: 'Kết quả hôm qua',
+                slug: 'ket-qua-hom-qua'
+            },
+            {
+                name: 'Kết quả 30 ngày',
+                slug: 'ket-qua-30-ngay'
+            },
+            {
+                name: 'Dò vé số',
+                slug: 'ket-qua-hom-qua'
+            },
+            {
+                name: 'Kết quả theo đài',
+                slug: 'ket-qua-theo-dai'
+            }
+        ]
+    }
+
+]
+
+export const LOTO_DAY = [
+    {
+        name: 'Miền Bắc',
+        slug: 'xo-so-mien-bac',
+        active: ''
+    },
+    {
+        name: 'Thứ 2',
+        slug: 'thu-2',
+        active: ''
+    },
+    {
+        name: 'Thứ 3',
+        slug: 'thu-3',
+        active: ''
+    },
+    {
+        name: 'Thứ 4',
+        slug: 'thu-4',
+        active: ''
+    },
+    {
+        name: 'Thứ 5',
+        slug: 'thu-5',
+        active: ''
+    },
+    {
+        name: 'Thứ 6',
+        slug: 'thu-6',
+        active: ''
+    },
+    {
+        name: 'Thứ 7',
+        slug: 'thu-7',
+        active: ''
+    },
+    {
+        name: 'Chủ nhật',
+        slug: 'chu-nhat',
+        active: ''
+    }
+];
+
+export const HOT_ITEM = {
+    'xo-so-mien-bac': [
+        { slug: '', name: 'Lô tô Gan MB', href: '/thong-ke/[type]', as: '/thong-ke/lo-gan-mien-bac' },
+        { slug: '', name: 'Trực Tiếp XSMB', href: '/truc-tiep-xo-so/[type]', as: '/truc-tiep-xo-so/mien-bac' },
+        { slug: 'lo-ket', name: 'Lô kết hôm nay', href: '/lo-ket', as: '/lo-ket' },
+        { slug: '', name: 'Phân tích xố số MB', href: '/phan-tich-kqxs/[type]', as: '/phan-tich-kqxs/mien-bac' }
+    ],
+    'xo-so-mien-nam': [
+        { slug: '', name: 'Lô tô Gan MN', href: '/thong-ke/[type]', as: '/thong-ke/lo-gan-mien-nam' },
+        { slug: '', name: 'Trực Tiếp XSMN', href: '/truc-tiep-xo-so/[type]', as: '/truc-tiep-xo-so/mien-nam' },
+        { slug: '', name: 'Lô kết hôm nay', href: '/lo-ket/[type]', as: '/lo-ket/xien-2' },
+        { slug: '', name: 'Phân tích xố số MN', href: '/phan-tich-kqxs/[type]', as: '/phan-tich-kqxs/mien-nam' }
+    ],
+    'xo-so-mien-trung': [
+        { slug: '', name: 'Lô tô Gan MT', href: '/thong-ke/[type]', as: '/thong-ke/lo-gan-mien-trung' },
+        { slug: '', name: 'Trực Tiếp XSMT', href: '/truc-tiep-xo-so/[type]', as: '/truc-tiep-xo-so/mien-trung' },
+        { slug: '', name: 'Lô kết hôm nay', href: '/lo-ket/[type]', as: '/lo-ket/xien-3' },
+        { slug: '', name: 'Phân tích xố số MT', href: '/phan-tich-kqxs/[type]', as: '/phan-tich-kqxs/mien-trung' }
+    ],
+};
